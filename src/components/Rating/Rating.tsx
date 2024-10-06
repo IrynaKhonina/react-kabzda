@@ -1,5 +1,11 @@
 
-export function Rating (props: any){
+
+
+type RaitingPropsType = {
+  value: number
+}
+
+export function Rating (props: RaitingPropsType){
 
    
     if(props.value === 1) {
@@ -82,7 +88,11 @@ export function Rating (props: any){
     
   }
   
-  function Star (props: any){
+
+  type starPropsType = {
+    selected: boolean
+  }
+  function Star (props: starPropsType){
     if(props.selected === true) {
 
       return <span><b>star</b></span>;

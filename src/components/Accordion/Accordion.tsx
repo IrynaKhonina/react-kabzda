@@ -1,13 +1,24 @@
- export function Accordion (props: any){
+
+
+type AccordionPropstype = {
+    titleValue: string
+}
+
+export function Accordion (props: AccordionPropstype){
     return(
       <div>
-        <AccordionTitle title ={props.title}/>
+        <AccordionTitle title ={props.titleValue}/>
         <AccordionBody/>
       </div>
     );
   }
   
-  function AccordionTitle(){
+type AccordionTitlePropsType = {
+    title: string
+}
+
+
+  function AccordionTitle(props: AccordionTitlePropsType){
     return (
   
   <h3>{props.title}</h3>
@@ -15,7 +26,9 @@
     );
   }
   
-  function AccordionBody(){
+
+ 
+  function AccordionBody(props: any){
     return (
   
       <ul>
